@@ -23,6 +23,7 @@ VUEJS_PARAMS = {
   per_page: 100
 }.freeze
 
+# Сами курсы, название курса (произвольно) и id курса, можно найти в ссылке если перейти на курс в TeachBase 
 COURSES = [
   { name: 'Поток: 11', course_session_id: 87912, params: RUBY_PARAMS, channel: RUBY_CHANNEL },
   { name: 'Поток: 12', course_session_id: 101114, params: RUBY_PARAMS, channel: RUBY_CHANNEL },
