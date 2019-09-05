@@ -23,7 +23,7 @@ class Bot
     COURSES.each do |course|
       response = @client.parse_course(course)
 
-      timestamp = timestamps[course[:course_session_id]] || 0
+      timestamp = timestamps[course[:course_session_id].to_s] || 0
       fix_timestamps(course[:course_session_id])
 
       json = JSON.parse(response.body, symbolize_names: true)
@@ -38,7 +38,7 @@ class Bot
   private
 
   def fix_timestamps(course_id)
-    @timestamps[course_id] = Time.now.to_i
+    @timestamps[course_id.to_s] = Time.now.to_i
     File.write('timestamps.txt', @timestamps.to_json)
   end
 
