@@ -31,7 +31,7 @@ class Init
   end
 
   def prepare
-    "\n*/5 * * * * /bin/bash -l -c 'ruby #{__dir__}/main.rb' # TeachBase Reminder\n"
+    "\n*/5 * * * * /bin/bash -l -c 'cd #{__dir__} && ruby main.rb' # TeachBase Reminder\n"
   end
 end
 
